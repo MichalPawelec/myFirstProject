@@ -4,7 +4,7 @@
 
 You can watch it here: https://michalpawelec.github.io/myFirstWebsite/
 
-And compare with how it should look like:
+And compare with how it should look like (+ price calculator in JS was added)
 
 ![siteToCompare](./warsztat1.jpg)
 
