@@ -9,7 +9,7 @@ And compare with how it should look like:
 ![siteToCompare](./warsztat1.jpg)
 
 ## Used technologies and tools:
-CSS
-HTML
-JavaScript
-Webpack (to divide project into few JS files)
+* CSS
+* HTML
+* JavaScript
+* Webpack (to divide project into few JS files)
