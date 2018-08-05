@@ -12,4 +12,3 @@ And compare with how it should look like (+ price calculator in JS was added)
 * CSS
 * HTML
 * JavaScript
-* Webpack (to divide project into few JS files)
