@@ -1,27 +1,219 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+          content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
     <title>SitOnChair</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="mainWidth">
             <a href="#">sit <span> on </span>chair</a>
-            <ul>
-                <li><a href="#">o firmie</a></li>
+            <ul class="nav-menu">
+                <li><a href="#">o firmie</a>
+                    <ul class="nav-subMenu">
+                        <li class="arrow"></li>
+                        <li><a href="#">Aktualności</a></li>
+                        <li><a href="#">Nasz team</a></li>
+                        <li><a href="#">Historia</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">galeria</a></li>
                 <li><a href="#">kontakt</a></li>
             </ul>
         </nav>
     </header>
-    <img src="images/black_chair.png"/>
-    <footer>
+    <section class="slider" >
+        <div class="mainWidth">
+            <div id="prevPicture">&lt;</div>
+            <ul class="sliderImages">
+                <li><img src="images/black_chair.png"/></li>
+                <li><img src="images/orange_chair.png"/></li>
+                <li><img src="images/red_chair.png"/></li>
+            </ul>
+            <div class="slider-text">
+                <h1>SIT <span>ON</span> OUR<span> CHAIR</span></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, animi cumque cupiditate delectus eos excepturi facere harum impedit minima molestiae mollitia nemo odit officiis, porro quibusdam repudiandae sequi totam veniam.</p>
+                <a href="#">Zobacz więcej</a>
+            </div>
+            <div id="nextPicture">&gt;</div>
+        </div>
+    </section>
+    <section class="chairs">
+        <div class="mainWidth">
+            <div class="chairClair">
+                <img src="images/box1_img.jpg"/>
+                <div class="chairBackground">
+                    <h3>Chair CLAIR</h3>
+                </div>
+            </div>
+            <div class="chairMargarita">
+                <img src="images/box2_img.jpg"/>
+                <div class="chairBackground">
+                    <h3>Chair MARGARITA</h3>
+                </div>
+            </div>
+            <div class="chairs-text">
+                <h3>Finds all inputs</h3>
+                <p>Find all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked.</p>
+                <p>Notice there is no change when clicking the checkboxes since no click events have been.</p>
+            </div>
+        </div>
+    </section>
+    <section class="choosePlan">
+        <div class="mainWidth">
+            <h2>CENNIK</h2>
+            <div class="threePlans">
+                <div class="plan">
+                    <h4>BASIC PLAN</h4>
+                    <div class="plan-topCircle"></div>
+                    <div class="plan-PriceCircle-Container">
+                        <div class="plan-PriceCircle">
+                            <span><sup>8</sup>5<span class="plan-sup plan-PriceCircle-SmallerText">99</span></span>
+                            <span class="plan-PriceCircle-SmallerText">PLN/MSC</span>
+                        </div>
+                    </div>
+                    <p>Zakup towaru + dowóz</p>
+                    <p>Serwis</p>
+                    <a href="#">Dołącz</a>
+                </div>
+                <div class="plan greenPlan">
+                    <h4>STANDARD PLAN</h4>
+                    <div class="plan-topCircle plan-topGreenCircle"></div>
+                    <div class="plan-PriceCircle-Container">
+                        <div class="plan-PriceCircle greenCircle">
+                            <span>95<span class="plan-sup plan-PriceCircle-SmallerText">99</span></span>
+                            <span class="plan-PriceCircle-SmallerText">PLN/MSC</span>
+                        </div>
+                    </div>
+                    <p>Zakup towaru + dowóz</p>
+                    <p>Serwis</p>
+                    <p>Gwarancja 5 lat</p>
+                    <a class="whiteButton" href="#">Dołącz</a>
+                </div>
+                <div class="plan">
+                    <div class="plan-topCircle"></div>
+                    <h4>ADVANCE PLAN</h4>
+                    <div class="plan-PriceCircle-Container">
+                        <div class="plan-PriceCircle">
+                            <span>211<span class="plan-sup plan-PriceCircle-SmallerText">00</span></span>
+                            <span class="plan-PriceCircle-SmallerText">PLN/MSC</span>
+                        </div>
+                    </div>
+                    <p>Zakup towaru + dowóz</p>
+                    <p>Serwis</p>
+                    <p>Gwarancja 6 lat</p>
+                    <p>Porady projektanta</p>
+                    <a href="#">Dołącz</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+
+    <section class="application">
+        <div class="mainWidth">
+            <section class="choice_part inline">
+                <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
+                <span class="greenBelt"></span>
+
+
+                <div class="form">
+                    <div class="dropDownList">
+                        <span class="listLabel chosenChairType">Wybierz rodzaj</span>
+                        <span class="listArrowChairType"></span>
+                        <ul class="listChairType">
+                            <li data-chair-type-price="600">Clair</li>
+                            <li data-chair-type-price="400">Margarita</li>
+                            <li data-chair-type-price="800">Selena</li>
+                        </ul>
+                    </div>
+                    <div class="dropDownList">
+                        <span class="listLabel chosenChairColor">Wybierz kolor</span>
+                        <span class="listArrowChairColor"></span>
+                        <ul class="listChairColor">
+                            <li data-color-price="100">Czerwony</li>
+                            <li data-color-price="150">Czarny</li>
+                            <li data-color-price="200">Pomarańczowy</li>
+                        </ul>
+                    </div>
+                    <div class="dropDownList">
+                        <span class="listLabel chosenChairMaterial">Wybierz materiał</span>
+                        <span class="listArrowChairMaterial"></span>
+                        <ul class="listChairMaterial">
+                            <li data-material-price="400">Tkanina</li>
+                            <li data-material-price="500">Skóra</li>
+                        </ul>
+                    </div>
+                    <div class="checkbox check-box">
+                        <input type="checkbox" id="transport" data-transport-price="200">
+                        <label for="transport">Transport</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="imagePart inline">
+                <img src="images/red_chair.png">
+            </section>
+
+            <section class="summarySection inline">
+                <div class="alignRight">
+                    <h3>PODSUMOWANIE</h3>
+                    <span class="greenBelt"></span>
+                </div>
+
+                <div class="summaryPanel">
+                    <div class="summary-LeftSide">
+                        <h4 class="chairType">Twój fotel</h4>
+                        <span class="chairColor"></span>
+                        <span class="chairMaterial"></span>
+                        <span class="transport"></span>
+                    </div>
+                    <div class="summary-RightSide">
+                        <h4 class="chairTypePrice"></h4>
+                        <span class="chairColorPrice"></span>
+                        <span class="chairMaterialPrice"></span>
+                        <span class="transportPrice"></span>
+                    </div>
+                    <div class="sumLabel">SUMA</div>
+                    <div class="totalPrice"><strong></strong></div>
+                </div>
+                <a href="" class="greenBfutton">Zamawiam</a>
+            </section>
+        </div>
+    </section>
+
+    <section class="contact mainWidth">
+        <div class="contact-Form"></div>
+            <form>
+                <h2>KONTAKT</h2>
+                <label><input type="text" placeholder="Imię"/></label>
+                <label><input type="email" placeholder="email"/></label>
+                <textarea placeholder="Wiadomość"></textarea>
+            </form>
+        <div class="contact-Form2">
+            <img src="images/red_chair.png"/>
+            <div class="checkbox check-box">
+                <input type="checkbox" id="agree">
+                <label for="agree">Zgadzam się na przetwarzanie danych osobowych</label>
+            </div>
+            <a href="#">Wyślij</a>
+        </div>
+    </section>
+    <footer>
+        <div class="mainWidth footer">
+            <p>Copyright 2014 | All Rights Reserved. - Sit On Chair</p>
+            <div class="socialMedia">
+                <a href="#"><img src="images/flickr.png"/></a>
+                <a href="#"><img src="images/vimeo.png"/></a>
+                <a href="#"><img src="images/pinterest.png"/></a>
+                <a href="#"><img src="images/twitter.png"/></a>
+            </div>
+            <a href="#">SIT <span> ON </span>CHAIR</a>
+        </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
