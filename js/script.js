@@ -1,6 +1,6 @@
-var showSubmenu = document.querySelector(".nav-menu li:first-of-type");
-var submenu = document.querySelector(".nav-subMenu");
-var sumbmenuArrow = document.querySelector(".nav-subMenu::before");
+const showSubmenu = document.querySelector(".nav-menu li:first-of-type");
+const submenu = document.querySelector(".nav-subMenu");
+const sumbmenuArrow = document.querySelector(".nav-subMenu::before");
 
 showSubmenu.addEventListener("mouseover", function () {
     submenu.classList.add("visible");
@@ -9,15 +9,15 @@ showSubmenu.addEventListener("mouseover", function () {
 
 showSubmenu.addEventListener("mouseout", function () {
     submenu.classList.remove("visible");
-    sumbmenuArrow.classList.add("visible");
+    sumbmenuArrow.classList.remove("visible");
 });
 
 
-var nextPicture = document.getElementById("nextPicture");
-var prevPicture = document.getElementById("prevPicture");
+const nextPicture = document.getElementById("nextPicture");
+const prevPicture = document.getElementById("prevPicture");
 
-var allImg = document.querySelectorAll(".sliderImages li");
-var index = 0;
+const allImg = document.querySelectorAll(".sliderImages li");
+let index = 0;
 
 allImg[index].classList.add("visible");
 
@@ -45,62 +45,63 @@ prevPicture.addEventListener("click", function () {
 });
 
 //po najechaniu myszką chowa się przezroczysty pasek
-var chairClair = document.querySelector(".chairClair");
-var chairMargarita = document.querySelector(".chairMargarita");
-var chairBackground = document.querySelector(".chairBackground");
+const chairClairImg = document.querySelector(".chairClair img");
+const chairClairBackground = document.querySelector(".chairClair .chairBackground");
+const chairMargaritaImg = document.querySelector(".chairMargarita img");
+const chairMargaritaBackground = document.querySelector(".chairMargarita .chairBackground");
 
-chairClair.addEventListener("mouseover", function() {
-    chairBackground.classList.add("hideChairBackground");
+chairClairImg.addEventListener("mouseover", function() {
+    chairClairBackground.classList.add("hideChairBackground");
 });
-chairClair.addEventListener("mouseout", function() {
-    chairBackground.classList.remove("hideChairBackground");
+chairClairImg.addEventListener("mouseout", function() {
+    chairClairBackground.classList.remove("hideChairBackground");
 });
-chairMargarita.addEventListener("mouseover", function() {
-    chairMargarita.lastElementChild.classList.add("hideChairBackground");
+chairMargaritaImg.addEventListener("mouseover", function() {
+    chairMargaritaBackground.classList.add("hideChairBackground");
 });
-chairMargarita.addEventListener("mouseout", function() {
-    chairMargarita.lastElementChild.classList.remove("hideChairBackground");
+chairMargaritaImg.addEventListener("mouseout", function() {
+    chairMargaritaBackground.classList.remove("hideChairBackground");
 });
 
-var arrowChairType = document.querySelector(".listArrowChairType");
-var listChairType = document.querySelector(".listChairType");
+const arrowChairType = document.querySelector(".listArrowChairType");
+const listChairType = document.querySelector(".listChairType");
 
-var arrowChairColor = document.querySelector(".listArrowChairColor");
-var listChairColor = document.querySelector(".listChairColor");
+const arrowChairColor = document.querySelector(".listArrowChairColor");
+const listChairColor = document.querySelector(".listChairColor");
 
-var arrowChairMaterial  = document.querySelector(".listArrowChairMaterial");
-var listChairMaterial = document.querySelector(".listChairMaterial");
+const arrowChairMaterial  = document.querySelector(".listArrowChairMaterial");
+const listChairMaterial = document.querySelector(".listChairMaterial");
 
-var summaryPanelLeft = document.querySelector(".summary-LeftSide");
-var summaryPanelRight = document.querySelector(".summary-RightSide");
+const summaryPanelLeft = document.querySelector(".summary-LeftSide");
+const summaryPanelRight = document.querySelector(".summary-RightSide");
 
-var chosenChairType = document.querySelectorAll(".chosenChairType");
-var chosenChairColor = document.querySelectorAll(".chosenChairColor");
-var chosenChairMaterial = document.querySelectorAll(".chosenChairMaterial");
+const chosenChairType = document.querySelectorAll(".chosenChairType");
+const chosenChairColor = document.querySelectorAll(".chosenChairColor");
+const chosenChairMaterial = document.querySelectorAll(".chosenChairMaterial");
 
-var chairType = summaryPanelLeft.querySelector(".chairType");
-var chairColor = summaryPanelLeft.querySelector(".chairColor");
-var chairMaterial = summaryPanelLeft.querySelector(".chairMaterial");
-var transport = summaryPanelLeft.querySelector(".transport");
+const chairType = summaryPanelLeft.querySelector(".chairType");
+const chairColor = summaryPanelLeft.querySelector(".chairColor");
+const chairMaterial = summaryPanelLeft.querySelector(".chairMaterial");
+const transport = summaryPanelLeft.querySelector(".transport");
 
-var chairTypePrice = summaryPanelRight.querySelector(".chairTypePrice");
-var chairColorPrice = summaryPanelRight.querySelector(".chairColorPrice");
-var chairMaterialPrice = summaryPanelRight.querySelector(".chairMaterialPrice");
-var transportPrice = summaryPanelRight.querySelector(".transportPrice");
-var totalPrice = document.querySelector(".totalPrice");
+const chairTypePrice = summaryPanelRight.querySelector(".chairTypePrice");
+const chairColorPrice = summaryPanelRight.querySelector(".chairColorPrice");
+const chairMaterialPrice = summaryPanelRight.querySelector(".chairMaterialPrice");
+const transportPrice = summaryPanelRight.querySelector(".transportPrice");
+const totalPrice = document.querySelector(".totalPrice");
 
-var summaryChairPrice = 0;
-var summaryColorPrice = 0;
-var summaryMaterialPrice = 0;
-var summaryTransportPrice = 0;
+let summaryChairPrice = 0;
+let summaryColorPrice = 0;
+let summaryMaterialPrice = 0;
+let summaryTransportPrice = 0;
 
-var form = document.querySelector(".form");
-var checkbox = form.querySelector(".checkbox");
-var checkboxInput = form.querySelector("input[type=checkbox]");
+const form = document.querySelector(".form");
+const checkbox = form.querySelector(".checkbox");
+const checkboxInput = form.querySelector("input[type=checkbox]");
 
 arrowChairType.addEventListener("click", function() {
     listChairType.classList.toggle("visible");
-    for (var i = 0; i < listChairType.children.length; i++) {
+    for (let i = 0; i < listChairType.children.length; i++) {
         listChairType.children[i].addEventListener("click", function() {
             chosenChairType.innerText = this.innerText;
             chairType.innerText = this.innerText;
@@ -115,7 +116,7 @@ arrowChairType.addEventListener("click", function() {
 
 arrowChairColor.addEventListener("click", function() {
     listChairColor.classList.toggle("visible");
-    for (var i = 0; i < listChairColor.children.length; i++) {
+    for (let i = 0; i < listChairColor.children.length; i++) {
         listChairColor.children[i].addEventListener("click", function() {
             chosenChairColor.innerHTML = this.innerHTML;
             chairColor.innerHTML = this.innerHTML;
@@ -130,7 +131,7 @@ arrowChairColor.addEventListener("click", function() {
 
 arrowChairMaterial.addEventListener("click", function() {
     listChairMaterial.classList.toggle("visible");
-    for (var i = 0; i < listChairMaterial.children.length; i++) {
+    for (let i = 0; i < listChairMaterial.children.length; i++) {
         listChairMaterial.children[i].addEventListener("click", function() {
             chosenChairMaterial.innerHTML == this.innerHTML;
             chairMaterial.innerHTML = this.innerHTML;
